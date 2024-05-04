@@ -1,0 +1,109 @@
+:root {
+  --bg: #242424;
+  background-color: var(--bg);
+}
+
+h1{
+  color: darkgray;
+}
+h2{
+  color:blanchedalmond; 
+}
+.timer && input::placeholder {
+  font-size: 100px;
+  font-weight: bold;
+  color: orange;
+  font-family: monospace;
+}
+.timer {
+
+  font-size: 100px;
+  font-weight: bold;
+  color: orange;
+  font-family: monospace;
+}
+ .new {
+  padding: 15px;
+  margin-right:10px ;
+  border: none;
+  border-radius: 9px;
+  background-color: turquoise;
+  color: white;
+}
+
+button {
+  padding: 15px;
+  margin-right:10px ;
+  border: none;
+  border-radius: 9px;
+  background-color: salmon;
+  color: white;
+}
+
+.decrease {
+  padding: 9px;
+  border: none;
+  border-radius: 9px;
+  margin-right: 40px;
+  background-color:red;
+  color: white;
+}
+.increase {
+  padding: 9px;
+  border: none;
+  border-radius: 9px;
+  background-color:green;
+  color: white;
+}
+.add {
+  padding: 15px;
+  margin-left:10px ;
+  border: none;
+  border-radius: 9px;
+  background-color:royalblue;
+  color: white;
+}
+.add:hover{
+  cursor: pointer;
+}
+.remove {
+  padding: 15px;
+  margin-left:10px ;
+  border: none;
+  border-radius: 9px;
+  background-color:transparent;
+  color: white;
+}
+.remove:hover{
+  cursor: pointer;
+}
+div{
+  text-align: center;
+  margin: 10px 0px;
+}
+.formInput {
+      padding: 12px 15px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      font-size: 16px;
+}
+li {
+  color: darkgray;
+  padding-top: 10px;
+}
+.toggle-button {
+  padding: 10px 20px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  font-size: 40px;
+  transition: color 0.3s ease-in-out; /* Transition only for color */
+  background-color: transparent; /* Set initial background color as transparent */
+}
+.toggle-button.on {
+  color: black;
+}
+
+.toggle-button.off {
+  color: white;
+}

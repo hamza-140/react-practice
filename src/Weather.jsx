@@ -9,7 +9,7 @@ function WeatherApp() {
     const fetchWeatherData = async (latitude, longitude) => {
       try {
         // Make API call to fetch weather data using latitude and longitude
-        const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=1d97883ceff84b78899232608240405&q=${latitude},${longitude}`);
+        const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=1d97883ceff84b78899232608240405&q=${latitude},${longitude}`);
         if (!response.ok) {
           throw new Error('Failed to fetch weather data');
         }

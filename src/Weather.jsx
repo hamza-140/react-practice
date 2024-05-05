@@ -5,10 +5,8 @@ function WeatherApp() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Function to fetch weather data
     const fetchWeatherData = async (latitude, longitude) => {
       try {
-        // Make API call to fetch weather data using latitude and longitude
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=1d97883ceff84b78899232608240405&q=${latitude},${longitude}`);
         if (!response.ok) {
           throw new Error('Failed to fetch weather data');
@@ -22,7 +20,6 @@ function WeatherApp() {
       }
     };
 
-    // Function to get user's location
     const getLocation = () => {
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -39,20 +36,19 @@ function WeatherApp() {
       }
     };
 
-    // Call the function to get user's location
     getLocation();
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="max-w-md p-8 bg-gray-300 shadow-md rounded-md">
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="bg-gray-200 p-8 rounded-md shadow-md max-w-md">
         {loading ? (
           <p className="text-center">Loading...</p>
         ) : (
           <>
             {weatherData ? (
               <div>
-                <h2 className="text-lg text-fuchsia-700 font-semibold mb-4">Weather for {weatherData.location.name}, {weatherData.location.country}</h2>
+                <h2 className="text-lg font-semibold text-fuchsia-700 mb-4">Weather for {weatherData.location.name}, {weatherData.location.country}</h2>
                 <p className="text-sm">Temperature: {weatherData.current.temp_c}°C</p>
                 <p className="text-sm">Condition: {weatherData.current.condition.text}</p>
               </div>
